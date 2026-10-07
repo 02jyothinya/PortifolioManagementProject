@@ -1,0 +1,55 @@
+[ {
+  "userid" : "101",
+  "name" : "jyothi",
+  "email" : "jyothi@gmail.com",
+  "holdings" : [ {
+    "holdingId" : "102",
+    "asset" : {
+      "type" : "mutualFund",
+      "assetId" : "104",
+      "assetName" : "SBI",
+      "purchasePrice" : 500.0,
+      "nav" : 550.0
+    },
+    "quantity" : 9,
+    "currentValue" : 4950.0
+  }, {
+    "holdingId" : "102",
+    "asset" : {
+      "type" : "stock",
+      "assetId" : "103",
+      "assetName" : "tcs",
+      "purchasePrice" : 2500.0,
+      "currentPrice" : 2700.0
+    },
+    "quantity" : 10,
+    "currentValue" : 27000.0
+  } ]
+}, {
+  "userid" : "201",
+  "name" : "meera",
+  "email" : "meera@gmail.com",
+  "holdings" : [ {
+    "holdingId" : "202",
+    "asset" : {
+      "type" : "stock",
+      "assetId" : "203",
+      "assetName" : "TCS",
+      "purchasePrice" : 3200.0,
+      "currentPrice" : 3500.0
+    },
+    "quantity" : 5,
+    "currentValue" : 17500.0
+  }, {
+    "holdingId" : "202",
+    "asset" : {
+      "type" : "mutualFund",
+      "assetId" : "204",
+      "assetName" : "HDFC",
+      "purchasePrice" : 800.0,
+      "nav" : 875.0
+    },
+    "quantity" : 6,
+    "currentValue" : 5250.0
+  } ]
+} ]

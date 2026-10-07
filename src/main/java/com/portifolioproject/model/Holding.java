@@ -6,39 +6,39 @@ public class Holding {
     private Asset asset;
     private int quantity;
 
-    // Constructor
+    // Default constructor - required for Jackson
+    public Holding() {
+    }
+
+    // Parameterized constructor
     public Holding(String holdingId, Asset asset, int quantity) {
         this.holdingId = holdingId;
         this.asset = asset;
         this.quantity = quantity;
     }
 
-    // Getter
+    // Getters
     public String getHoldingId() {
         return holdingId;
     }
 
-    // Setter
-    public void setHoldingId(String holdingId) {
-        this.holdingId = holdingId;
-    }
-
-    // Getter
     public Asset getAsset() {
         return asset;
     }
 
-    // Setter
-    public void setAsset(Asset asset) {
-        this.asset = asset;
-    }
-
-    // Getter
     public int getQuantity() {
         return quantity;
     }
 
-    // Setter
+    // Setters - required for Jackson
+    public void setHoldingId(String holdingId) {
+        this.holdingId = holdingId;
+    }
+
+    public void setAsset(Asset asset) {
+        this.asset = asset;
+    }
+
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
@@ -48,7 +48,6 @@ public class Holding {
         return asset.calculateCurrentValue() * quantity;
     }
 
-    // toString
     @Override
     public String toString() {
         return "Holding{" +
@@ -59,5 +58,3 @@ public class Holding {
                 '}';
     }
 }
-
-

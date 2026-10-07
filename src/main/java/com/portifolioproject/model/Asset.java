@@ -1,57 +1,60 @@
 package com.portifolioproject.model;
 
-public class Asset {
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "type"
+)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Stock.class, name = "stock"),
+        @JsonSubTypes.Type(value = MutualFund.class, name = "mutualFund")
+})
+public abstract class Asset {
 
     private String assetId;
     private String assetName;
     private double purchasePrice;
 
-    // Constructor
+    // Default constructor - required for Jackson
+    public Asset() {
+    }
+
+    // Parameterized constructor
     public Asset(String assetId, String assetName, double purchasePrice) {
         this.assetId = assetId;
         this.assetName = assetName;
         this.purchasePrice = purchasePrice;
     }
 
-    // Getter for Asset ID
+    // Getters
     public String getAssetId() {
         return assetId;
     }
 
-    // Setter for Asset ID
-    public void setAssetId(String assetId) {
-        this.assetId = assetId;
-    }
-
-    // Getter for Asset Name
     public String getAssetName() {
         return assetName;
     }
 
-    // Setter for Asset Name
-    public void setAssetName(String assetName) {
-        this.assetName = assetName;
-    }
-
-    // Getter for Purchase Price
     public double getPurchasePrice() {
         return purchasePrice;
     }
 
-    // Setter for Purchase Price
+    // Setters - required for Jackson
+    public void setAssetId(String assetId) {
+        this.assetId = assetId;
+    }
+
+    public void setAssetName(String assetName) {
+        this.assetName = assetName;
+    }
+
     public void setPurchasePrice(double purchasePrice) {
         this.purchasePrice = purchasePrice;
     }
 
-    // Calculate Current Value
-    public double calculateCurrentValue() {
-        return purchasePrice;
-    }
-
-    // Display Asset
-    public void display() {
-        System.out.println("Asset ID: " + assetId);
-        System.out.println("Asset Name: " + assetName);
-        System.out.println("Purchase Price: " + purchasePrice);
-    }
+    // Abstract method
+    public abstract double calculateCurrentValue();
 }

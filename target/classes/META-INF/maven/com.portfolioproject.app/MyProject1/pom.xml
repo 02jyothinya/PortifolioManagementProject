@@ -3,11 +3,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.klu</groupId>
-  <artifactId>MyMavenProject</artifactId>
+  <groupId>com.portfolioproject.app</groupId>
+  <artifactId>MyProject1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>MyMavenProject</name>
+  <name>MyProject1</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -34,6 +34,11 @@
       <artifactId>junit-jupiter-api</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.18.1</version>
+</dependency>
     <!-- Optionally: parameterized tests support -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
