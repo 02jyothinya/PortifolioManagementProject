@@ -1,0 +1,71 @@
+{
+  "products" : [ {
+    "type" : "product",
+    "id" : "P101",
+    "name" : "Gaming Laptop",
+    "description" : "15.6-inch RTX 4060 16GB RAM",
+    "price" : 1199.99,
+    "category" : "Electronics"
+  }, {
+    "type" : "product",
+    "id" : "P102",
+    "name" : "Wireless Mouse",
+    "description" : "Ergonomic 2.4GHz optical mouse",
+    "price" : 29.99,
+    "category" : "Accessories"
+  }, {
+    "type" : "product",
+    "id" : "P103",
+    "name" : "Mechanical Keyboard",
+    "description" : "RGB Tenkeyless Mechanical Keyboard",
+    "price" : 89.99,
+    "category" : "Accessories"
+  } ],
+  "stock" : [ {
+    "product" : {
+      "type" : "product",
+      "id" : "P101",
+      "name" : "Gaming Laptop",
+      "description" : "15.6-inch RTX 4060 16GB RAM",
+      "price" : 1199.99,
+      "category" : "Electronics"
+    },
+    "quantity" : 20
+  }, {
+    "product" : {
+      "type" : "product",
+      "id" : "P102",
+      "name" : "Wireless Mouse",
+      "description" : "Ergonomic 2.4GHz optical mouse",
+      "price" : 29.99,
+      "category" : "Accessories"
+    },
+    "quantity" : 100
+  }, {
+    "product" : {
+      "type" : "product",
+      "id" : "P103",
+      "name" : "Mechanical Keyboard",
+      "description" : "RGB Tenkeyless Mechanical Keyboard",
+      "price" : 89.99,
+      "category" : "Accessories"
+    },
+    "quantity" : 45
+  } ],
+  "suppliers" : [ {
+    "type" : "supplier",
+    "id" : "S201",
+    "name" : "TechDistro Corp",
+    "description" : "Authorized Computer Hardware Distributor",
+    "contactNumber" : "+1-800-555-0199",
+    "address" : "100 Silicon Blvd, CA"
+  }, {
+    "type" : "supplier",
+    "id" : "S202",
+    "name" : "Peripheral Plus",
+    "description" : "Quality Computer Accessories Supplier",
+    "contactNumber" : "+1-800-555-0144",
+    "address" : "456 Market St, NY"
+  } ],
+  "transactions" : [ ]
+}
